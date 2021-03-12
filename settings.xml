@@ -1,0 +1,41 @@
+<settings>
+    <servers>
+
+        <server>
+            <id>snapshots</id>
+            <username>${NEXUS_USERNAME}</username>
+            <password>${NEXUS_PASSWORD}</password>
+        </server>
+
+        <server>
+            <id>releases</id>
+            <username>${NEXUS_USERNAME}</username>
+            <password>${NEXUS_PASSWORD}</password>
+        </server>
+
+        <server>
+            <id>configs</id>
+            <username>${NEXUS_USERNAME}</username>
+            <password>${NEXUS_PASSWORD}</password>
+        </server>
+
+    </servers>
+
+	<profiles>
+
+		<profile>
+			<id>d02</id>
+			<activation>
+				<activeByDefault>true</activeByDefault>
+			</activation>
+			<properties>
+
+				<!-- General Database Properties -->
+				<db.userName>appservers</db.userName>
+				<db.password>appservers</db.password>
+
+				<!-- First %s = host name, Second %s = db name -->
+			</properties>
+		</profile>
+	</profiles>
+</settings>
